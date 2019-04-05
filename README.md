@@ -1,1 +1,1 @@
-# Card learning porject
+# Card learning Laravel project

@@ -13,7 +13,7 @@ class ParsclickServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        var_dump('boot');
+//        var_dump('boot');
 
     }
 
@@ -24,7 +24,7 @@ class ParsclickServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        var_dump('register');
+//        var_dump('register');
 
 
     }

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Mail;
 use \Illuminate\Validation\Validator;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;
@@ -74,6 +75,20 @@ Route::get('user/{user}',function (\App\User $user){
     return $user;
 
 
+
+});
+
+
+
+Route::any('email',function (){
+
+   Mail::send('email.test',[],function ($message){
+
+       $message->from('mj.ranjbar.94@gmail.com','mohammaad');
+       $message->to('saghia.mjr@gmail.com','javad')->subject('welcome to my website');
+
+
+   });
 
 });
 

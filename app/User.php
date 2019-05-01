@@ -76,6 +76,11 @@ class User extends Authenticatable
         $this->roles()->sync(Role::whereName($role)->firstOrFail());
     }
 
+    public static function scopePremium($query)
+    {
+        return $query->where('type','premium');//('type','=','premium')
+    }
+
 
 
 

@@ -26,7 +26,7 @@ Route::group(['middlewere'=>['web']],function(){
 
     });
 
-
+Route::get('users',['as'=>'users','uses'=>'UsersController@index']);
 
 Route::get('/',function (){
     return view('welcome');

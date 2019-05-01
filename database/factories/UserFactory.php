@@ -26,7 +26,7 @@ $factory->define(App\User::class , function (Faker $faker) {
 
 $factory->define(App\Card::class, function (Faker $faker) {
     return [
-       'title'=> $faker->sentence(),
+       'title'=> $faker->paragraph(2,true),
     ];
 });
 

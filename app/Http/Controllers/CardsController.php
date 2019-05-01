@@ -14,7 +14,7 @@ class CardsController extends Controller
 
     public function index()
     {
-         $cards=DB::table('cards')->get();
+         $cards=DB::table('cards')->simplePaginate(6);
         return view('cards/index',compact('cards'));
 
     }

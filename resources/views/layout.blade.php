@@ -38,7 +38,7 @@
 
 
 
-<script src="/js/bundle.js"></script>
+{{--<script src="/js/bundle.js"></script>--}}
 
 </body>
 </html>

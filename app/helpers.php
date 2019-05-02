@@ -16,6 +16,12 @@ function sort_users_by($column,$body){
 
 }
 
+function active($path,$active='active'){
+
+ return \Illuminate\Http\Request::is($path)?$active : ;
+
+}
+
 
 
  ?>

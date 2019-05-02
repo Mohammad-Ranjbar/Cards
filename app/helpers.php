@@ -1,7 +1,9 @@
 <?php
 
 
-function flash($message,$level='info'){
+use Illuminate\Http\Request;
+
+function flash($message, $level='info'){
 
 session()->flash('flash_message',$message);
 session()->flash('flash_message_level',$level);
@@ -16,11 +18,11 @@ function sort_users_by($column,$body){
 
 }
 
-function active($path,$active='active'){
-
- return \Illuminate\Http\Request::is($path)?$active : ;
-
-}
+//function active($path,$active='active'){
+//
+// return Request::is($path)?$active : ;
+//
+//}
 
 
 

@@ -1,18 +1,24 @@
 <?php
 
+
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Queue;
 use \Illuminate\Validation\Validator;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;
 //use Illuminate\Support\Facades\Auth;
 
 
-Route::get('admin',function(){
-
-return 'admin';
 
 
-})->middleware('auth.basic');
+
+
+Route::get('/','QueueController@index');
+
+
+
+
 Route::group(['middlewere'=>['web']],function(){
 
 
@@ -33,10 +39,7 @@ Route::group(['middlewere'=>['web']],function(){
 
 Route::get('users',['as'=>'users','uses'=>'UsersController@index']);
 
-Route::get('/',function (){
-    return view('welcome');
 
-});
 
 Route::group(['prefix'=>'api','middleware'=>'auth:api'],function (){
 
@@ -70,6 +73,10 @@ Route::group(['prefix'=>'api','middleware'=>'auth:api'],function (){
 //   return 'validation was successful';
 //
 //});
+
+
+
+
 
     Route::post('/','PagesController@store');
 

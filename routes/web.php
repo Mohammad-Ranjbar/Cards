@@ -21,6 +21,12 @@ Route::get('vue',function (){
     return view('vue');
 });
 
+Route::get('done',function (){
+
+    return 'done!';
+
+});
+
 Route::group(['middlewere'=>['web']],function(){
 
 

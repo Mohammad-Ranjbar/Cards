@@ -6,6 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/app.css">
+    <script src="/js/app.js">  </script>
+
 
     <link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css" rel="stylesheet" />
     <title>Document</title>
@@ -13,19 +15,18 @@
 </head>
 <body>
 
+@yield('content')
 
-<a href="{{route('cards')}}">ALl cards</a>
+{{--<a href="{{route('cards')}}">ALl cards</a>--}}
 
 
-<h4 class="text-center">{{time()}}</h4>
+{{--<h4 class="text-center">{{time()}}</h4>--}}
 
 <section class="container" id="pjax-container">
 
-        @include('partials.flash')
-        @yield('content')
+    @include('partials.flash')
 </section>
 
-    <script src="/js/app.js">  </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.js"></script>
     <script>

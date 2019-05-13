@@ -17,7 +17,9 @@ use Illuminate\Support\Facades\Request;
 Route::get('/','QueueController@index');
 
 
-
+Route::get('vue',function (){
+    return view('vue');
+});
 
 Route::group(['middlewere'=>['web']],function(){
 

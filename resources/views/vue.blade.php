@@ -4,7 +4,7 @@
 
 <div id="app" class="container">
 
-        <button type="submit" class="btn btn-primary" @click="count +=1" >Add</button>
+        <button type="submit" class="btn btn-primary" @click="count +=1" >Add{{count}}</button>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
